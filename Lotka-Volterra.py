@@ -37,9 +37,6 @@ class Ecological:
         a=0
         for i in range(0, self.species.__len__()):
           if index != i:
-            alpha = self.alpha[index][i]
-            alpha = alpha * -1 if (self.species[index]['p'] > self.species[index]['K'] and alpha > 0) else alpha
-
             a+=  self.species[i]['p'] * self.alpha[index][i] * self.species[index]['p'] / self.species[index]['K']
         return int(a)
 
